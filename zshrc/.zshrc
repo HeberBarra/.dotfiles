@@ -31,6 +31,7 @@ plugins=(
     suse 
     systemadmin
     yarn
+    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -50,7 +51,7 @@ setopt histignorespace
 setopt noclobber
 
 export JAVA_HOME=~/bin/jdk-21
-export PATH=$JAVA_HOME/bin:~/bin/dart-sass/:~/Games/Scripts:~/bin/*.sh:$PATH
+export PATH=$JAVA_HOME/bin:~/bin/dart-sass/:~/Games/Scripts:~/bin/*.sh:~/bin/jdt-language-server/bin:$PATH
 
 export EDITOR='nvim'
 
