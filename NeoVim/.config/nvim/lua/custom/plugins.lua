@@ -16,7 +16,7 @@ local plugins = {
     {
         "williamboman/mason.nvim",
         opts = {
-            ensure_installed = { "bash-language-server", "csharp-language-server","css-lsp", "cssmodules-language-server","html-lsp", "jdlts", "lua-language-server", "prettier", "pyright","stylua" },
+            ensure_installed = { "bash-language-server", "clangd", "csharp-language-server","css-lsp", "cssmodules-language-server","html-lsp", "jdlts", "lua-language-server", "prettier", "pyright","stylua" },
         },
     }
 }
