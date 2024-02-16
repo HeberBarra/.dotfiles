@@ -2,7 +2,7 @@ local plugins = {
     {
         "nvim-treesitter/nvim-treesitter",
         opts = {
-        ensure_installed = { "vim", "lua", "html", "css", "javascript", "typescript", "tsx", "json", "yaml", "csv", "python", "dockerfile", "c", "c_sharp", "cpp", "gitignore", "java", "bash", "sql"},
+        ensure_installed = { "vim", "lua", "html", "css", "javascript", "typescript", "tsx", "json", "yaml", "csv", "python", "dockerfile", "c", "c_sharp", "cpp", "gitignore", "java", "bash", "sql", "xml"},
         },
     },
     {
