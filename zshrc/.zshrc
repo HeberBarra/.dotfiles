@@ -61,7 +61,6 @@ alias vim=nvim
 alias sass='sass --no-source-map'
 alias sasswatch='sass --watch'
 alias python=python3
-alias java8=~/bin/openlogic-openjdk-jre-8u392-b08-linux-x64/bin/java
 alias update_system='sudo ~/bin/update.sh'
 alias java8="~/bin/jdk-8/bin/java"
 alias javac8="~/bin/jdk-8/bin/javac"
