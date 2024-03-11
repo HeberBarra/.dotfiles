@@ -1,16 +1,18 @@
-vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
+local two_spaces_indentation = {"html", "json", "lua", "xml"}
+local four_spaces_indentation = {"c", "cpp", "cs", "java", "python", "javascript", "typescript"}
 
-local patterns = {"html", "json", "lua", "xml"}
-
-for _, pattern in ipairs(patterns) do
-  vim.api.nvim_create_autocmd("FileType", {
-    pattern = pattern,
-    callback = function ()
-      vim.opt.shiftwidth = 2
-      vim.opt.tabstop = 2
-      vim.opt.softtabstop = 2
-    end
-  })
+local set_indentation_settings = function(filetypes, space_quantity)
+  for _, filetype in ipairs(filetypes) do
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = filetype,
+      callback = function()
+        vim.opt.shiftwidth = space_quantity
+        vim.opt.tabstop = space_quantity
+        vim.opt.softtabstop = space_quantity
+      end
+    })
+  end
 end
+
+set_indentation_settings(two_spaces_indentation, 2);
+set_indentation_settings(four_spaces_indentation, 4);
