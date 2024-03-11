@@ -20,7 +20,7 @@ plugins=(
     dotnet 
     extract 
     git 
-    gpg-agent 
+    gradle-completion
     history 
     mvn 
     npm 
@@ -67,3 +67,11 @@ alias javac8="~/bin/jdk-8/bin/javac"
 alias java19="~/bin/jdk-19.0.1/bin/java"
 alias javac19="~/bin/jdk-19.0.1/bin/javac"
 alias :q=exit
+
+if command -v bat >/dev/null 2>&1; then
+  alias cat=bat
+fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
