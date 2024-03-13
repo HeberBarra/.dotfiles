@@ -1,6 +1,9 @@
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="crcandy"
+ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator ssh virtualenv anaconda pyenv os_icon)
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
 zstyle ':omz:update' mode reminder 
 zstyle ':omz:update' frequency 7
@@ -11,27 +14,28 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="dd/mm/yyyy"
 
 plugins=(
-    aliases 
-    autopep8 
-    branch 
-    copybuffer 
-    docker 
-    docker-compose 
-    dotnet 
-    extract 
-    git 
-    gradle-completion
-    history 
-    mvn 
-    npm 
-    pip 
-    poetry 
-    poetry-env 
-    ssh-agent 
-    suse 
-    systemadmin
-    yarn
-    zsh-syntax-highlighting
+  aliases
+  autopep8
+  branch
+  copybuffer
+  docker
+  docker-compose
+  dotnet
+  extract
+  git
+  gradle-completion
+  history
+  mvn
+  npm
+  pip
+  poetry
+  poetry-env
+  ssh-agent
+  suse
+  systemadmin
+  yarn
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -70,6 +74,11 @@ alias :q=exit
 
 if command -v bat >/dev/null 2>&1; then
   alias cat=bat
+fi
+
+if command -v lsd >/dev/null 2>&1; then
+  alias ls='lsd -A'
+  alias tree='lsd --tree'
 fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
