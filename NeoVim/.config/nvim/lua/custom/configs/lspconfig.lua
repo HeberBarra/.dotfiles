@@ -5,18 +5,18 @@ local lspconfig = require("lspconfig")
 local servers = { "bashls", "cssls", "cssmodules_ls", "html", "jdtls", "ltex", "pyright", "sqlls", "tsserver"}
 
 for _, lsp in ipairs(servers) do
-    lspconfig[lsp].setup {
-        on_attach = on_attach,
-        capabilities = capabilities
-    }
+  lspconfig[lsp].setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+  }
 end
 
 lspconfig.clangd.setup {
-    on_attach = function(client, bufnr)
-        client.server_capabilities.signatureHelpProvider = false
-        on_attach(client, bufnr)
-    end,
-    capabilities = capabilities,
+  on_attach = function(client, bufnr)
+    client.server_capabilities.signatureHelpProvider = false
+    on_attach(client, bufnr)
+  end,
+  capabilities = capabilities,
 }
 
 lspconfig.omnisharp.setup {
