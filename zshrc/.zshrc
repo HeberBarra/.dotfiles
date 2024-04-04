@@ -8,7 +8,6 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 zstyle ':omz:update' mode reminder 
 zstyle ':omz:update' frequency 7
 
-# DISABLE_AUTO_TITLE="true"
 ENABLE_CORRECTION="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="dd/mm/yyyy"
@@ -66,10 +65,6 @@ alias sass='sass --no-source-map'
 alias sasswatch='sass --watch'
 alias python=python3
 alias update_system='sudo ~/bin/update.sh'
-alias java8="~/bin/jdk-8/bin/java"
-alias javac8="~/bin/jdk-8/bin/javac"
-alias java19="~/bin/jdk-19.0.1/bin/java"
-alias javac19="~/bin/jdk-19.0.1/bin/javac"
 alias :q=exit
 
 if command -v bat >/dev/null 2>&1; then
@@ -80,6 +75,22 @@ if command -v lsd >/dev/null 2>&1; then
   alias ls='lsd -A'
   alias tree='lsd --tree'
 fi
+
+if command -v fastfetch >/dev/null 2>&1; then
+  alias neofetch=fastfetch
+fi
+
+function yz() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+clear
+fastfetch
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
