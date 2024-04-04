@@ -1,5 +1,6 @@
 [include]
-  path="~/.gitconfig.local"
+  path = "~/.gitconfig.local"
+  path = "~/GitHub/delta/catppuccin.gitconfig"
 [pull]
 	rebase = true
 [core]
@@ -14,5 +15,5 @@
   pager = true
 [delta]
   navigate = true
-  light = true
   line-numbers = true
+  features = catppuccin-macchiato
