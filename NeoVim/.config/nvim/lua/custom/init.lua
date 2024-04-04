@@ -14,5 +14,7 @@ local set_indentation_settings = function(filetypes, space_quantity)
   end
 end
 
+vim.keymap.set("n", "<leader>ld", function () require("trouble").toggle() end)
+
 set_indentation_settings(two_spaces_indentation, 2);
 set_indentation_settings(four_spaces_indentation, 4);
