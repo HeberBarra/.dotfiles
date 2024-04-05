@@ -61,8 +61,8 @@ local plugins = {
     build = "make",
     lazy = "true",
     cmd = "CodeSnap",
-    config = function (_, opts)
-      require("codesnap").setup(opts)
+    config = function ()
+      require("custom.configs.codesnap")
     end
   }
 }
