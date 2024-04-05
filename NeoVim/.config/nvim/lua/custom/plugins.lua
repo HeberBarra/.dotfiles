@@ -55,6 +55,15 @@ local plugins = {
         other = "",
       }
     }
+  },
+  {
+    "mistricky/codesnap.nvim",
+    build = "make",
+    lazy = "true",
+    cmd = "CodeSnap",
+    config = function (_, opts)
+      require("codesnap").setup(opts)
+    end
   }
 }
 
