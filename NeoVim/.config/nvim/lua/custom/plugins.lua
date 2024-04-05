@@ -1,9 +1,7 @@
 local plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = {
-     ensure_installed = { "vim", "lua", "html", "css", "javascript", "typescript", "tsx", "json", "yaml", "csv", "python", "dockerfile", "c", "c_sharp", "cpp", "gitignore", "java", "bash", "sql", "xml", "latex", "kotlin"},
-    },
+    opts = require("custom.configs.treesitter"),
   },
   {
     "neovim/nvim-lspconfig",
@@ -14,14 +12,12 @@ local plugins = {
   },
   {
     "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = { "bash-language-server", "clangd","css-lsp", "cssmodules-language-server","html-lsp", "jdlts", "ltex-ls","lua-language-server", "omnisharp", "prettier", "pyright", "sqlls","stylua" },
-    },
+    opts = require("custom.configs.mason"),
   },
   {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    cmd = {"TroubleToggle"},
+    cmd = { "TroubleToggle" },
     config = function ()
       require("custom.configs.trouble")
     end
