@@ -1,0 +1,32 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "kitty",
+    "source": "~/.config/fastfetch/button-colour.png"
+  },
+  "modules": [
+    "title",
+    "separator",
+    "os",
+    "host",
+    "kernel",
+    "uptime",
+    "packages",
+    "shell",
+    "terminal",
+    "de",
+    "theme",
+    "icons",
+    "font",
+    "cpu",
+    "gpu",
+    "memory",
+    "disk",
+    {
+      "type": "weather",
+      "timeout": 1500
+    },
+    "break",
+    "colors"
+  ]
+}
