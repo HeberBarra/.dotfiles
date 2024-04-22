@@ -17,3 +17,5 @@
   navigate = true
   line-numbers = true
   features = catppuccin-macchiato
+[init]
+	defaultBranch = main
