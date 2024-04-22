@@ -38,13 +38,16 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.aliases.sh
+
+export PATH=$JAVA_HOME/bin:/bin:~/bin/dart-sass:~/bin/jdt-language-server/bin:$PATH
 
 zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
 zstyle :omz:plugins:ssh-agent agent-forwarding yes
 zstyle :omz:plugins:ssh-agent helper ksshaskpass
-zstyle :omz:plugins:ssh-agent identities
 zstyle :omz:plugins:ssh-agent lazy yes
+zstyle :omz:plugins:ssh-agent quiet yes
 
 setopt globdots
 setopt correct
@@ -53,32 +56,7 @@ setopt histignoredups
 setopt histignorespace
 setopt noclobber
 
-export JAVA_HOME=~/bin/jdk-21
-export PATH=$JAVA_HOME/bin:~/bin/dart-sass/:~/Games/Scripts:~/bin/*.sh:~/bin/jdt-language-server/bin:$PATH
-
 export EDITOR='nvim'
-
-alias ls='ls -A --color=always --group-directories-first'
-alias vi=nvim
-alias vim=nvim
-alias sass='sass --no-source-map'
-alias sasswatch='sass --watch'
-alias python=python3
-alias update_system='sudo ~/bin/update.sh'
-alias :q=exit
-
-if command -v bat >/dev/null 2>&1; then
-  alias cat=bat
-fi
-
-if command -v lsd >/dev/null 2>&1; then
-  alias ls='lsd -A'
-  alias tree='lsd --tree'
-fi
-
-if command -v fastfetch >/dev/null 2>&1; then
-  alias neofetch=fastfetch
-fi
 
 function yz() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
