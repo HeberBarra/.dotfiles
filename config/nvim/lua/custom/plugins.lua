@@ -25,11 +25,16 @@ local plugins = {
   {
     "mistricky/codesnap.nvim",
     build = "make",
-    lazy = "true",
+    lazy = true,
     cmd = "CodeSnap",
     config = function ()
       require("custom.configs.codesnap")
     end
+  },
+  {
+    "adelarsq/neofsharp.vim",
+    ft = {"fsharp"},
+    lazy = true
   }
 }
 

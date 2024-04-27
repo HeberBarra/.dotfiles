@@ -4,6 +4,7 @@ local opts = {
     "clangd",
     "css-lsp",
     "cssmodules-language-server",
+    "fsautocomplete",
     "html-lsp",
     "jdlts",
     "ltex-ls",
