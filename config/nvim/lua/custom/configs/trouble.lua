@@ -39,5 +39,3 @@ trouble.setup({
   }
 })
 
-vim.keymap.set("n", "<leader>ld", function () trouble.toggle() end)
-

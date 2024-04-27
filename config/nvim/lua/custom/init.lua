@@ -16,3 +16,6 @@ end
 
 set_indentation_settings(two_spaces_indentation, 2);
 set_indentation_settings(four_spaces_indentation, 4);
+
+vim.keymap.set("n", "<leader>ld", function () require("trouble").toggle() end, { desc="Toggle folke/trouble" })
+
