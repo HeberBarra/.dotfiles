@@ -1,8 +1,20 @@
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
-
 local lspconfig = require("lspconfig")
-local servers = { "bashls", "cssls", "cssmodules_ls", "fsautocomplete","html", "jdtls", "ltex", "pyright", "sqlls", "tsserver"}
+local util = require("lspconfig/util")
+
+local servers = {
+  "bashls",
+  "cssls",
+  "cssmodules_ls",
+  "fsautocomplete",
+  "html",
+  "jdtls",
+  "ltex",
+  "pyright",
+  "sqlls",
+  "tsserver"
+}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -26,5 +38,19 @@ lspconfig.omnisharp.setup {
   enable_roslyn_analyzers = false,
   enable_import_completion = true,
   sdk_include_prereleases = true
+}
+
+lspconfig.rust_analyzer.setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+  filetypes = { "rust" },
+  root_dir = util.root_pattern("Cargo.toml"),
+  settings = {
+    ['rust-analyzer'] = {
+      cargo = {
+        allFeatures = true
+      }
+    }
+  }
 }
 
