@@ -53,6 +53,15 @@ local plugins = {
     config = function ()
       require("custom.configs.noice")
     end
+  },
+  {
+    "MeanderingProgrammer/markdown.nvim",
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    cmd = { "RenderMarkdownToggle" },
+    ft = "markdown",
+    config = function ()
+      require("render-markdown").setup({})
+    end
   }
 }
 

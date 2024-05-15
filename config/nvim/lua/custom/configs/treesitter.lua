@@ -15,6 +15,8 @@ local opts = {
     "kotlin",
     "latex",
     "lua",
+    "markdown",
+    "markdown_inline",
     "python",
     "sql",
     "tsx",
