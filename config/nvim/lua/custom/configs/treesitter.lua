@@ -18,6 +18,7 @@ local opts = {
     "markdown",
     "markdown_inline",
     "python",
+    "regex",
     "sql",
     "tsx",
     "typescript",
