@@ -14,29 +14,28 @@ HIST_STAMPS="dd/mm/yyyy"
 
 plugins=(
   aliases
-  autopep8
   branch
-  copybuffer
   docker
   docker-compose
   dotnet
-  extract
-  git
   gradle-completion
-  history
+  fzf-tab
   mvn
   npm
   pip
   poetry
   poetry-env
   ssh-agent
-  suse
-  systemadmin
   yarn
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
 
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
 source $ZSH/oh-my-zsh.sh
@@ -47,9 +46,20 @@ export PATH=$JAVA_HOME/bin:/bin:~/bin/dart-sass:~/bin/jdt-language-server/bin:$P
 setopt globdots
 setopt correct
 setopt correctall
-setopt histignoredups
-setopt histignorespace
 setopt noclobber
+
+# History config
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
 
 export EDITOR='nvim'
 
@@ -61,6 +71,9 @@ function yz() {
 	fi
 	rm -f -- "$tmp"
 }
+
+eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 clear
 fastfetch
