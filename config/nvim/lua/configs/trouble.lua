@@ -38,4 +38,3 @@ trouble.setup({
     other = "",
   }
 })
-

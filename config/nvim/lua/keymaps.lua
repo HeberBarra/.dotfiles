@@ -1,0 +1,10 @@
+vim.keymap.set("n", "<Space>", "<Nop>", { silent = true })
+vim.g.mapleader = " "
+vim.keymap.set("n", "<C-z>", "")
+vim.keymap.set("n", "<C-s-z>", "")
+vim.keymap.set("n", "<c-S>", "<cmd>w<CR>", { desc = "Save document" })
+vim.keymap.set("n", "fg", "<cmd>Telescope git_files<CR>", { desc = "Telescope find git files" })
+vim.keymap.set("n", "fd", "<cmd>Telescope find_files<CR>", { desc = "Telescope find files" })
+vim.keymap.set("n", "ff", "<cmd>Telescope<CR>", { desc = "Open Telescope" })
+vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeFocus<CR>", { desc = "Focus NvimTree" })
+vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle NvimTree"})

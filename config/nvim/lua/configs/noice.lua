@@ -20,4 +20,3 @@ noice.setup({
     lsp_doc_border = false
   }
 })
-

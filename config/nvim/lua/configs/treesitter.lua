@@ -1,4 +1,4 @@
-local opts = {
+local options = {
   ensure_installed = {
     "bash",
     "c",
@@ -7,7 +7,7 @@ local opts = {
     "css",
     "csv",
     "dockerfile",
-    "gitignore",
+		"gitignore",
     "html",
     "java",
     "javascript",
@@ -15,17 +15,26 @@ local opts = {
     "kotlin",
     "latex",
     "lua",
+    "luadoc",
     "markdown",
     "markdown_inline",
+    "printf",
     "python",
     "regex",
     "sql",
     "tsx",
     "typescript",
     "vim",
+    "vimdoc",
     "xml",
     "yaml"
-  }
+  },
+  auto_install = true,
+  highlight = {
+    enable = true,
+    use_languagetree = true,
+  },
+  indent = { enable = true },
 }
 
-return opts
+return options
