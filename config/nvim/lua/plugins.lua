@@ -119,9 +119,15 @@ local plugins = {
       vim.g.rustfmt_autosave = 1
     end
   },
+	{
+    "NStefan002/screenkey.nvim",
+    cmd = "Screenkey",
+    version = "*",
+    config = true,
+	},
   {
     "nvim-telescope/telescope.nvim",
-    dependencies = { 
+    dependencies = {
       "nvim-lua/plenary.nvim",
       { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
       "nvim-tree/nvim-web-devicons"
