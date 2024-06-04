@@ -7,4 +7,4 @@ vim.keymap.set("n", "fg", "<cmd>Telescope git_files<CR>", { desc = "Telescope fi
 vim.keymap.set("n", "fd", "<cmd>Telescope find_files<CR>", { desc = "Telescope find files" })
 vim.keymap.set("n", "ff", "<cmd>Telescope<CR>", { desc = "Open Telescope" })
 vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeFocus<CR>", { desc = "Focus NvimTree" })
-vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle NvimTree"})
+vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
