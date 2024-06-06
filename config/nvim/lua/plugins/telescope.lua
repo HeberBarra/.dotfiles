@@ -13,6 +13,15 @@ return {
       defaults = {},
       pickers = {},
       extensions = {
+				media = {
+					backend = "ueberzug",
+					flags = {
+						ueberzug = {
+							move = true
+						}
+					},
+					cache_path = vim.fn.stdpath("cache") .. "/media"
+				},
         switch = {
           matchers = {
             {
