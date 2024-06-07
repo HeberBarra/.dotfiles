@@ -1,10 +1,5 @@
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator ssh virtualenv anaconda pyenv os_icon)
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-
 zstyle ':omz:update' mode reminder 
 zstyle ':omz:update' frequency 7
 
@@ -74,6 +69,7 @@ function yz() {
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
 
 clear
 fastfetch
