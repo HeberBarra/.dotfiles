@@ -95,14 +95,14 @@
       "keyColor": "blue"
     },
     {
-      "type": "uptime",
-      "key": "│ ├󰅐",
+      "type": "weather",
+      "timeout": 1500,
+      "key": "│ ├☀",
       "keyColor": "blue"
     },
     {
-      "type": "weather",
-      "timeout": 1500,
-      "key": "└─┴☀",
+      "type": "uptime",
+      "key": "└─┴󰅐",
       "keyColor": "blue"
     },
     {
