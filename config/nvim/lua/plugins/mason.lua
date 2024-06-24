@@ -18,6 +18,7 @@ return {
 
     mason_lspconfig.setup({
       ensure_installed = {
+				"arm-lsp",
         "bashls",
         "clangd",
         "cssls",

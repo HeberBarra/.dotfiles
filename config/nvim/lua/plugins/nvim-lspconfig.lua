@@ -33,6 +33,7 @@ return {
     end
 
     local servers = {
+			"asm_lsp",
       "bashls",
       "cssls",
       "cssmodules_ls",
