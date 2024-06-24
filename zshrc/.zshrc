@@ -36,7 +36,7 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases.sh
 
-export PATH=$JAVA_HOME/bin:/bin:~/bin/dart-sass:~/bin/jdt-language-server/bin:$PATH
+export PATH=$JAVA_HOME/bin:/bin:~/bin/dart-sass:~/bin/jdt-language-server/bin:~/.cargo/bin:$PATH
 
 setopt globdots
 setopt correct
