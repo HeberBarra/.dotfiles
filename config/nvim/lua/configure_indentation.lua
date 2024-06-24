@@ -1,5 +1,5 @@
 local two_spaces_indentation = { "html", "json", "jsonc", "lua", "toml", "xml" }
-local four_spaces_indentation = { "c", "cpp", "cs", "java", "python", "javascript", "typescript" }
+local four_spaces_indentation = { "asm", "c", "cpp", "cs", "java", "python", "javascript", "typescript" }
 
 local set_indentation_settings = function(filetypes, space_quantity)
   for _, filetype in ipairs(filetypes) do
