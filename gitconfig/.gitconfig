@@ -2,7 +2,7 @@
   path = "~/.gitconfig.local"
   path = "~/GitHub/delta/catppuccin.gitconfig"
 [pull]
-	rebase = true
+  rebase = true
 [core]
   excludesFile = ~/.gitignore
   pager = delta
@@ -18,4 +18,4 @@
   line-numbers = true
   features = catppuccin-macchiato
 [init]
-	defaultBranch = main
+  defaultBranch = main
