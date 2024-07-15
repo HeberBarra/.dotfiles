@@ -18,7 +18,7 @@ return {
 
     mason_lspconfig.setup({
       ensure_installed = {
-				"arm-lsp",
+				"asm_lsp",
         "bashls",
         "clangd",
         "cssls",
@@ -28,7 +28,6 @@ return {
         "jdtls",
         "ltex",
         "lua_ls",
-        "omnisharp",
         "pyright",
         "rust_analyzer",
         "sqlls",
