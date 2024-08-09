@@ -6,8 +6,7 @@ Set-Variable HASH_FONT_FILE -Option Constant -Value "6596922AABAF8876BB657C36A47
 # Based on https://gist.github.com/anthonyeden/0088b07de8951403a643a8485af2709b
 
 $FontFile = "JetBrainsMono.zip"
-# "C:\Windows\Fonts"
-$Destination = "/tmp/install/"
+$Destination = "C:\Windows\Fonts"
 
 If (-not(Test-Path -Path $FontFile -PathType Leaf)) {
     Invoke-WebRequest https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip -OutFile JetBrainsMono.zip
