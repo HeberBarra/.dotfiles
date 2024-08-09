@@ -1,0 +1,101 @@
+// Based on https://gist.github.com/AndersBennedsgaard/0ace8c5ffbf263a88736b138f8a1f34e
+// Based on https://github.com/cretueusebiu/dotfiles/blob/master/windows-terminal-settings.json
+
+{
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "alwaysShowTabs": true,
+    "showTabsInTitlebar": true,
+    "tabWidthMode": "equal",
+    "useAcrylicInTabRow": true,
+    "wordDelimiters": " /\\()\"'-.,:;<>~!@#$%^&*|+=[]{}~?\u2502",
+    
+    "profiles": {
+
+        "defaults": {
+            "closeOnExit": "graceful",
+            "colorScheme": "Catppuccin Macchiato",
+            "cursorShape": "bar",
+            "font": {
+                "face": "JetBrainsMonoNL Nerd Font Mono",
+                "size": 11
+            },
+            "opacity": 75,
+            "scrollbarState": "visible"
+        },
+
+        "list": [
+            {
+                // Make changes here to the powershell.exe profile
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "Windows PowerShell",
+                "commandline": "powershell.exe",
+                "hidden": false
+            },
+            {
+                // Make changes here to the cmd.exe profile
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "name": "cmd",
+                "commandline": "cmd.exe",
+                "hidden": false
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "name": "Azure Cloud Shell",
+                "hidden": true,
+                "source": "Windows.Terminal.Azure"
+            }
+        ]
+
+    },
+    
+    // https://github.com/catppuccin/windows-terminal
+    "schemes": [
+        {
+            "name": "Catppuccin Macchiato",
+            
+            "cursorColor": "#F4DBD6",
+            "selectionBackground": "#5B6078",
+            
+            "background": "#24273A",
+            "foreground": "#CAD3F5",
+            
+            "black": "#494D64",
+            "red": "#ED8796",
+            "green": "#A6DA95",
+            "yellow": "#EED49F",
+            "blue": "#8AADF4",
+            "purple": "#F5BDE6",
+            "cyan": "#8BD5CA",
+            "white": "#B8C0E0",
+            
+            "brightBlack": "#5B6078",
+            "brightRed": "#ED8796",
+            "brightGreen": "#A6DA95",
+            "brightYellow": "#EED49F",
+            "brightBlue": "#8AADF4",
+            "brightPurple": "#F5BDE6",
+            "brightCyan": "#8BD5CA",
+            "brightWhite": "#A5ADCB"
+        }
+    ],
+    
+    "themes": [
+        {
+            "name": "Catppuccin Macchiato",
+            "tab": {
+              "background": "#24273AFF",
+              "showCloseButton": "always",
+              "unfocusedBackground": null
+            },
+            "tabRow": {
+              "background": "#1E2030FF",
+              "unfocusedBackground": "#181926FF"
+            },
+            "window": {
+              "applicationTheme": "dark"
+            }
+        }
+    ]
+
+}
