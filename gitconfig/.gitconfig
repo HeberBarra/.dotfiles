@@ -1,6 +1,11 @@
 [include]
   path = "~/.gitconfig.local"
   path = "~/GitHub/delta/catppuccin.gitconfig"
+[user]    
+  name = Heber F Barra
+  email = heberferreirabarra@gmail.com
+[commit]
+  gpgsign = true
 [pull]
   rebase = true
 [core]
