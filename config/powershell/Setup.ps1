@@ -14,7 +14,7 @@ If (-not(Test-Path -Path $FontFile -PathType Leaf)) {
     Write-Host "Found JetBrainsMono.zip file."
 }
 
-If ((Get-FileHash $FontFile).Hash -eq $HASH_FONTS_FILE) {
+If ((Get-FileHash $FontFile).Hash -eq $HASH_FONT_FILE) {
     Write-Host "Fonts file is OK."
 } Else {
     Write-Host "Fonts file is corrupt. Terminating..."
