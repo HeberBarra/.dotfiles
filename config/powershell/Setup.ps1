@@ -58,12 +58,5 @@ if (-not(Test-Path $WindowsTerminalConfigFile -PathType Leaf)) {
     Invoke-WebRequest https://raw.githubusercontent.com/HeberBarra/.dotfiles/main/config/powershell/settings.json -OutFile settings.json
 }
 
-if ((Get-FileHash $WindowsTerminalConfigFile).Hash -eq $HASH_CONF_FILE) {
-    Write-Host "Config file is OK."
-} else {
-    Write-Host "Something is wrong with the config file. Terminating..."
-    Exit
-}
-
 New-Item -Path $WindowsTerminalConfigFolder -ItemType Directory -ErrorAction SilentlyContinue | Out-Null
 Copy-Item $WindowsTerminalConfigFile -Destination $WindowsTerminalConfigFolder
