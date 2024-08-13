@@ -30,6 +30,8 @@ if (Get-Command winget -ErrorAction SilentlyContinue) {
     winget install JanDeDobbeleer.OhMyPosh -s winget
 }
 
+$ProfileFolder = Split-Path $PROFILE -Parent
+New-Item -Path $ProfileFolder -Type Directory -ErrorAction SilentlyContinue | Out-Null
 New-Item -Path $PROFILE -Type File -ErrorAction SilentlyContinue | Out-Null
 
 if ($null -eq (Get-Content $PROFILE) -or -not((Get-Content $profile).Contains($OhMyPoshScript))) {
