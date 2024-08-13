@@ -1,11 +1,12 @@
 ### Hash Values ###
-Set-Variable HASH_CONF_FILE -Option Constant -Value "7AD1E6902A2274AA02C7FEB4A2FA0602DC90A967346D049C901788CE15CF1E37"
+Set-Variable HASH_CONF_FILE -Option Constant -Value "0BC6825B80011C5625D4FC4F236A6F4AB7A8ADE2B849DA3336E13A1E989C6AEB"
 Set-Variable HASH_FONT_FILE -Option Constant -Value "6596922AABAF8876BB657C36A47009AC68C388662DB45D4AC05C2536C2F07ADE"
 
 ### Font Setup ###
 # Based on https://gist.github.com/anthonyeden/0088b07de8951403a643a8485af2709b
 
 $FontFile = "JetBrainsMono.zip"
+$TempFolder = "$env:Temp\Fonts"
 $Destination = "C:\Windows\Fonts"
 
 If (-not(Test-Path -Path $FontFile -PathType Leaf)) {
@@ -21,7 +22,15 @@ If ((Get-FileHash $FontFile).Hash -eq $HASH_FONT_FILE) {
     Exit
 }
 
-Expand-Archive ./JetBrainsMono.zip -DestinationPath $Destination -ErrorAction SilentlyContinue
+New-Item -Path $TempFolder -Type Directory
+Expand-Archive ./JetBrainsMono.zip -DestinationPath $TempFolder -ErrorAction SilentlyContinue
+
+$FontFiles = Get-ChildItem -Path "$TempFolder\*" -Include ('*.fon','*.otf','*.ttc','*.ttf') -Recurse
+
+foreach($Font in $FontFiles) {
+    Copy-Item $Font $Destination
+    New-ItemProperty -Name $Font.BaseName -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Fonts" -PropertyType string -Value $Font.name
+}
 
 ### Oh My Posh Setup ###
 $OhMyPoshScript = "oh-my-posh init pwsh --config https://raw.githubusercontent.com/HeberBarra/.dotfiles/main/config/ohmyposh/config.toml | Invoke-Expression"
@@ -41,7 +50,7 @@ if ($null -eq (Get-Content $PROFILE) -or -not((Get-Content $profile).Contains($O
 
 ### Windows Terminal Setup ###
 $WindowsTerminalConfigFile = "settings.json"
-$WindowsTerminalConfigFolder = "%LOCALAPPDATA%/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/"
+$WindowsTerminalConfigFolder = "$env:LOCALAPPDATA/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/"
 
 Remove-Item "$WindowsTerminalConfigFolder/$WindowsTerminalConfigFile" -Force -ErrorAction SilentlyContinue
 
@@ -56,6 +65,5 @@ if ((Get-FileHash $WindowsTerminalConfigFile).Hash -eq $HASH_CONF_FILE) {
     Exit
 }
 
-New-Item -Path $WindowsTerminalConfigFolder -ItemType Directory | Out-Null
+New-Item -Path $WindowsTerminalConfigFolder -ItemType Directory -ErrorAction SilentlyContinue | Out-Null
 Copy-Item $WindowsTerminalConfigFile -Destination $WindowsTerminalConfigFolder
-Remove-Item $WindowsTerminalConfigFile -Force
