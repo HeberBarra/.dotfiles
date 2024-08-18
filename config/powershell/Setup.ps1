@@ -1,3 +1,5 @@
+#Requires -RunAsAdministrator
+
 Set-Variable HASH_FONT_FILE -Option Constant -Value "6596922AABAF8876BB657C36A47009AC68C388662DB45D4AC05C2536C2F07ADE"
 
 ### Font Setup ###
