@@ -35,14 +35,14 @@ return {
     local servers = {
 			"asm_lsp",
       "bashls",
+			"csharp_ls",
       "cssls",
       "cssmodules_ls",
       "fsautocomplete",
       "html",
       "jdtls",
-      "ltex",
       "pyright",
-      "sqlls",
+      "sqls",
       "tsserver",
     }
 

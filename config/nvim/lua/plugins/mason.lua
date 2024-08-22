@@ -18,7 +18,6 @@ return {
 
     mason_lspconfig.setup({
       ensure_installed = {
-				"asm_lsp",
         "bashls",
         "clangd",
         "cssls",
@@ -26,11 +25,10 @@ return {
         "fsautocomplete",
         "html",
         "jdtls",
-        "ltex",
         "lua_ls",
         "pyright",
         "rust_analyzer",
-        "sqlls",
+        "sqls",
       },
       automatic_installation = true,
     })
