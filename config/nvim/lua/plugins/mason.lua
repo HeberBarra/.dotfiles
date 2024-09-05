@@ -29,6 +29,7 @@ return {
         "pyright",
         "rust_analyzer",
         "sqls",
+        "texlab",
       },
       automatic_installation = true,
     })

@@ -33,9 +33,9 @@ return {
     end
 
     local servers = {
-			"asm_lsp",
+      "asm_lsp",
       "bashls",
-			"csharp_ls",
+      "csharp_ls",
       "cssls",
       "cssmodules_ls",
       "fsautocomplete",
@@ -43,6 +43,7 @@ return {
       "jdtls",
       "pyright",
       "sqls",
+      "texlab",
       "tsserver",
     }
 
@@ -82,7 +83,7 @@ return {
       },
     })
 
-		lspconfig["rust_analyzer"].setup({
+    lspconfig["rust_analyzer"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
       filetypes = { "rust" },
