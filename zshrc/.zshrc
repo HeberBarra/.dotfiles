@@ -1,3 +1,6 @@
+# Skip aliases
+zstyle ':omz:plugins:*' aliases no
+
 export ZSH=$HOME/.oh-my-zsh
 
 zstyle ':omz:update' mode reminder 
