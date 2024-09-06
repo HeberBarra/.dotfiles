@@ -44,7 +44,7 @@ return {
       "pyright",
       "sqls",
       "texlab",
-      "tsserver",
+      "ts_ls",
     }
 
     for _, server in ipairs(servers) do
