@@ -41,6 +41,7 @@ return {
       "fsautocomplete",
       "html",
       "jdtls",
+      "phpactor",
       "pyright",
       "sqls",
       "texlab",

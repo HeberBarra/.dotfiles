@@ -26,6 +26,7 @@ return {
         "html",
         "jdtls",
         "lua_ls",
+        "phpactor",
         "pyright",
         "rust_analyzer",
         "sqls",
