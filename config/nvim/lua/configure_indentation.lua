@@ -1,4 +1,5 @@
-local two_spaces_indentation = { "bib", "html", "json", "jsonc", "tex", "lua", "toml", "sql", "xml", "gitconfig" }
+local two_spaces_indentation =
+  { "bib", "html", "json", "jsonc", "tex", "lua", "php", "toml", "sql", "xml", "gitconfig" }
 local four_spaces_indentation = { "asm", "c", "cpp", "cs", "java", "python", "javascript", "ps1", "typescript" }
 local tab_indentation = { "make" }
 
