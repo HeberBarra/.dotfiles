@@ -1,7 +1,7 @@
 alias ls='ls -A --color=always --group-directories-first'
 alias sass='sass --no-source-map'
 alias sass_wh='sass --watch'
-alias python='python3'
+alias python='python3.14'
 alias exit='exit || exit'
 alias :q=exit
 alias clear=reset
