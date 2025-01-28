@@ -1,0 +1,11 @@
+services:
+  jupyter:
+    container_name: jupyter-notebook
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - "./notebooks/:/app/notebooks/"
+    ports:
+      - "82:8888"
