@@ -1,6 +1,7 @@
 local two_spaces_indentation =
   { "bib", "html", "json", "jsonc", "tex", "lua", "php", "toml", "sql", "xml", "gitconfig" }
-local four_spaces_indentation = { "asm", "c", "cpp", "cs", "java", "python", "javascript", "ps1", "typescript" }
+local four_spaces_indentation =
+  { "asm", "bash", "c", "cpp", "cs", "conf", "java", "nginx", "python", "javascript", "ps1", "sh", "typescript" }
 local tab_indentation = { "make" }
 
 local set_indentation_settings = function(filetypes, space_quantity)
