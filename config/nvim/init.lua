@@ -2,6 +2,7 @@ require("booststrap")
 require("configure_indentation")
 require("lazy").setup({ import = "plugins" }, {})
 
+vim.opt.fillchars = "eob: "
 vim.o.foldenable = true
 vim.o.foldmethod = "marker"
 vim.cmd.colorscheme("material-deep-ocean")
