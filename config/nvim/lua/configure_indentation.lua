@@ -12,6 +12,7 @@ local set_indentation_settings = function(filetypes, space_quantity)
         vim.opt.shiftwidth = space_quantity
         vim.opt.tabstop = space_quantity
         vim.opt.softtabstop = space_quantity
+        vim.opt.expandtab = true
       end,
     })
   end
