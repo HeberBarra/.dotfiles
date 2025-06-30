@@ -1,0 +1,7 @@
+services:
+  language-tool:
+    container_name: language-tool
+    image: erikvl87/languagetool:latest
+    restart: always
+    ports:
+      - "8010:8010"
