@@ -43,7 +43,7 @@ setopt noclobber
 
 # History config
 HISTSIZE=5000
-HISTFILE=~/.zsh_history
+HISTFILE=$ZDOTDIR/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
 setopt appendhistory
