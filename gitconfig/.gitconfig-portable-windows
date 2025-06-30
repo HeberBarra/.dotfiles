@@ -1,0 +1,7 @@
+[user]
+  name = Heber F Barra
+  email = heberferreirabarra@gmail.com
+[init]
+  defaultBranch = main
+[core]
+  sshCommand = 'C:\Windows\System32\OpenSSH\ssh.exe'
