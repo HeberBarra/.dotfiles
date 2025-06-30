@@ -1,7 +1,15 @@
 services:
+  dozzle:
+    image: amir20/dozzle:latest
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "160:8080"
   language-tool:
     container_name: language-tool
     image: erikvl87/languagetool:latest
     restart: always
     ports:
       - "8010:8010"
+
