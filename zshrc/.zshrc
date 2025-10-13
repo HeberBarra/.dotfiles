@@ -1,3 +1,5 @@
+export ZSH="$HOME/.oh-my-zsh/"
+
 # Skip aliases
 zstyle ':omz:plugins:*' aliases no
 zstyle ':omz:update' mode auto
@@ -20,7 +22,6 @@ plugins=(
   pip
   poetry
   poetry-env
-  ssh-agent
   yarn
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -35,6 +36,7 @@ zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases.sh
+source $HOME/.path.sh
 
 setopt globdots
 setopt correct
@@ -43,7 +45,7 @@ setopt noclobber
 
 # History config
 HISTSIZE=5000
-HISTFILE=$ZDOTDIR/.zsh_history
+HISTFILE=$HOME/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
 setopt appendhistory
@@ -70,3 +72,15 @@ function yz() {
 clear
 fastfetch
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# pnpm
+export PNPM_HOME="/home/heber/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
