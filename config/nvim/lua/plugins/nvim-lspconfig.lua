@@ -6,7 +6,6 @@ return {
     { "antosha417/nvim-lsp-file-operations", config = true },
   },
   config = function()
-    local lspconfig = require("lspconfig")
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
     local keymap = vim.keymap
     local opts = { noremap = true, silent = true }
@@ -49,20 +48,20 @@ return {
     }
 
     for _, server in ipairs(servers) do
-      lspconfig[server].setup({
+      vim.lsp.config(server, {
         capabilities = capabilities,
         on_attach = on_attach,
       })
     end
 
-    lspconfig["clangd"].setup({
+    vim.lsp.config("clangd", {
       on_attach = function(client, bufnr)
         on_attach(client, bufnr)
       end,
       capabilities = capabilities,
     })
 
-    lspconfig["lua_ls"].setup({
+    vim.lsp.config("lua_ls", {
       capabilities = capabilities,
       settings = {
         Lua = {
@@ -83,7 +82,7 @@ return {
       },
     })
 
-    lspconfig["rust_analyzer"].setup({
+    vim.lsp.config("rust_analyzer", {
       capabilities = capabilities,
       on_attach = on_attach,
       filetypes = { "rust" },
