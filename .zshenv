@@ -15,4 +15,5 @@ export HIST_STAMPS="dd/mm/yyyy"
 export SAVEHIST=5000
 
 export PATH="$HOME/flutter/bin/:$HOME/.local/share/JetBrains/Toolbox/scripts/:$PATH"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
