@@ -69,13 +69,11 @@ if command -v pnpm >/dev/null 2>&1; then
   esac
 fi
 
-if command -v sdk >/dev/null 2>&1; then
-  export SDKMAN_DIR="$HOME/.sdkman"
-  [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-fi
-
 if command -v uv >/dev/null 2>&1; then
   . "$HOME/.local/share/../bin/env"
   eval "$(uv generate-shell-completion zsh)"
 fi
+
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
