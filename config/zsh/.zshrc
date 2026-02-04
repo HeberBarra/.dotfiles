@@ -46,6 +46,11 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(oh-my-posh init zsh --config $XDG_CONFIG_HOME/ohmyposh/config.toml)"
 
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 if command -v nvm >/dev/null 2>&1; then
   
   function chpwd() {
@@ -53,11 +58,6 @@ if command -v nvm >/dev/null 2>&1; then
       nvm use
     fi
   }
-
-
-  export NVM_DIR="$HOME/.config/nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 fi
 
