@@ -1,6 +1,6 @@
 [include]
   path = "~/.gitconfig.local"
-  path = "~/repositories/delta/catppuccin.gitconfig"
+  path = "~/.dotfiles/git-config/catppuccin-delta/catppuccin.gitconfig"
 [user]    
   name = Heber F Barra
   email = heberferreirabarra@gmail.com

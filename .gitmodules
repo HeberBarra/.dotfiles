@@ -13,3 +13,6 @@
 [submodule "config/zsh/plugins/zsh-you-should-use"]
 	path = config/zsh/plugins/zsh-you-should-use
 	url = https://github.com/MichaelAquilina/zsh-you-should-use.git
+[submodule "git-config/catppuccin-delta"]
+	path = git-config/catppuccin-delta
+	url = https://github.com/catppuccin/delta.git
