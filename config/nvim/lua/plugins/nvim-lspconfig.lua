@@ -52,35 +52,12 @@ return {
         capabilities = capabilities,
         on_attach = on_attach,
       })
+      vim.lsp.enable(server)
     end
 
-    vim.lsp.config("clangd", {
-      on_attach = function(client, bufnr)
-        on_attach(client, bufnr)
-      end,
-      capabilities = capabilities,
-    })
-
-    vim.lsp.config("lua_ls", {
-      capabilities = capabilities,
-      settings = {
-        Lua = {
-          diagnostics = {
-            globals = { "vim" },
-          },
-          workspace = {
-            library = {
-              vim.fn.expand("$VIMRUNTIME/lua"),
-              vim.fn.expand("$VIMRUNTIME/lua/vim/lsp"),
-              vim.fn.stdpath("data") .. "/lazy/ui/nvchad_types",
-              vim.fn.stdpath("data") .. "/lazy/lazy.nvim/lua/lazy",
-            },
-            maxPreload = 100000,
-            preloadFileSize = 10000,
-          },
-        },
-      },
-    })
+    vim.lsp.enable("clangd")
+    vim.lsp.enable("gh_actions_ls")
+    vim.lsp.enable("lua_ls")
 
     vim.lsp.config("rust_analyzer", {
       capabilities = capabilities,
