@@ -2,14 +2,14 @@ alias q=" exit || exit"
 alias ls=" ls -A --color=always --group-directories-first"
 alias clear=" reset"
 alias echo=" echo"
-alias vi="nvim"
+alias vi=" nvim"
 
 if command -v bat >/dev/null 2>&1; then
   alias cat=" bat"
 fi
 
 if command -v lsd >/dev/null 2>&1; then
-  alias ls=" lsd -A"
+  alias ls=" lsd -A --color=always --group-dirs=first"
   alias tree=" lsd --tree"
 fi
 
