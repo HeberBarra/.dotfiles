@@ -41,7 +41,6 @@ return {
       "html",
       "jdtls",
       "phpactor",
-      "pyright",
       "sqls",
       "texlab",
       "ts_ls",
@@ -57,7 +56,9 @@ return {
 
     vim.lsp.enable("clangd")
     vim.lsp.enable("gh_actions_ls")
+    vim.lsp.enable("ltex_plus")
     vim.lsp.enable("lua_ls")
+    vim.lsp.enable("ty")
 
     vim.lsp.config("rust_analyzer", {
       capabilities = capabilities,
