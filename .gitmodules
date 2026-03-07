@@ -16,3 +16,6 @@
 [submodule "git-config/catppuccin-delta"]
 	path = git-config/catppuccin-delta
 	url = https://github.com/catppuccin/delta.git
+[submodule "config/kitty/themes/catppuccin"]
+	path = config/kitty/themes/catppuccin
+	url = https://github.com/catppuccin/kitty.git
