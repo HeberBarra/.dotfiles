@@ -11,6 +11,7 @@
 [core]
   excludesFile = ~/.gitignore
   pager = delta
+	quotepath = off
 [color]
   diff = auto
   status = auto
