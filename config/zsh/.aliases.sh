@@ -3,6 +3,7 @@ alias ls=" ls -A --color=always --group-directories-first"
 alias clear=" reset"
 alias echo=" echo"
 alias vi=" nvim"
+alias python="python3"
 
 if command -v bat >/dev/null 2>&1; then
   alias cat=" bat"
