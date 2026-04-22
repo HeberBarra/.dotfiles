@@ -32,7 +32,6 @@ return {
     end
 
     local servers = {
-      "asm_lsp",
       "bashls",
       "csharp_ls",
       "cssls",
@@ -42,7 +41,6 @@ return {
       "jdtls",
       "phpactor",
       "sqls",
-      "texlab",
       "ts_ls",
     }
 
@@ -58,6 +56,7 @@ return {
     vim.lsp.enable("gh_actions_ls")
     vim.lsp.enable("ltex_plus")
     vim.lsp.enable("lua_ls")
+    vim.lsp.enable("texlab")
     vim.lsp.enable("ty")
 
     vim.lsp.config("rust_analyzer", {
