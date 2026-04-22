@@ -10,4 +10,4 @@ vim.keymap.set("n", "<leader>e", "<cmd>Neotree focus<CR>", { desc = "Focus NvimT
 vim.keymap.set("n", "<C-n>", "<cmd>Neotree toggle<CR>", { desc = "Toggle NvimTree" })
 vim.keymap.set("n", "<leader><tab>", "<cmd>bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader><s-tab>", "<cmd>bprev<CR>", { desc = "Previous buffer" })
-vim.keymap.set("n", "<leader>x", "<cmd>lua require('close_buffers').delete({type='this'})<CR>", { desc = "Close current buffer" })
+vim.keymap.set("n", "<leader>x", "<cmd>lua require('snacks').bufdelete()<CR>", { desc = "Close current buffer" })
