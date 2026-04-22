@@ -21,6 +21,7 @@ autoload -U compinit; compinit
 source $ZDOTDIR/plugins/fzf-tab/fzf-tab.plugin.zsh
 source $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source $ZDOTDIR/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 source $ZDOTDIR/plugins/zsh-you-should-use/zsh-you-should-use.plugin.zsh
 
 ## FZF-TAB Config (based upon the configuration displayed on the repo)
