@@ -2,11 +2,11 @@
 
 return {
   cmd = { "texlab" },
-  filetypes = { "tex", "plaintex", "bib" },
+  filetypes = { "tex", "plaintex" },
   root_markers = { ".git", ".latexindent.yaml" },
   settings = {
     texlab = {
-      bibtexFormatter = "latexindent",
+      bibtexFormatter = "none",
       formatterLineLength = 120
     }
   }
