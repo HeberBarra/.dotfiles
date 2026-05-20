@@ -5,6 +5,9 @@ return {
     "hrsh7th/cmp-nvim-lsp",
     { "antosha417/nvim-lsp-file-operations", config = true },
   },
+  opts = {
+    inlay_hints = { enabled = true },
+  },
   config = function()
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
     local keymap = vim.keymap
