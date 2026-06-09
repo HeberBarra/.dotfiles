@@ -68,7 +68,7 @@ if command -v pnpm >/dev/null 2>&1; then
   export PNPM_HOME="/home/heber/.local/share/pnpm"
   case ":$PATH:" in
     *":$PNPM_HOME:"*) ;;
-    *) export PATH="$PNPM_HOME:$PATH" ;;
+    *) export PATH="$PNPM_HOME/bin:$PATH" ;;
   esac
 fi
 

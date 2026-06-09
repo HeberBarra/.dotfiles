@@ -11,7 +11,7 @@ fi
 
 if command -v lsd >/dev/null 2>&1; then
   alias ls=" lsd -A --color=always --group-dirs=first"
-  alias tree=" lsd --tree"
+  alias tree=" lsd --tree --group-dirs=first"
 fi
 
 if command -v fastfetch >/dev/null 2>&1; then
