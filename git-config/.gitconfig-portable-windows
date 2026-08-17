@@ -5,3 +5,5 @@
   defaultBranch = main
 [core]
   sshCommand = 'C:\\Windows\\System32\\OpenSSH\\ssh.exe'
+[pull]
+  rebase = true
