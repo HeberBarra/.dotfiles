@@ -1,4 +1,11 @@
 services:
+  calibre-web:
+    image: linuxserver/calibre-web:latest
+    restart: unless-stopped
+    volumes:
+      - ~/Calibre Library:/books
+    ports:
+      - "4020:8083"
   dozzle:
     image: amir20/dozzle:latest
     restart: always
