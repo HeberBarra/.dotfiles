@@ -64,14 +64,6 @@ if command -v nvm >/dev/null 2>&1; then
 
 fi
 
-if command -v pnpm >/dev/null 2>&1; then
-  export PNPM_HOME="/home/heber/.local/share/pnpm"
-  case ":$PATH:" in
-    *":$PNPM_HOME:"*) ;;
-    *) export PATH="$PNPM_HOME/bin:$PATH" ;;
-  esac
-fi
-
 if command -v uv >/dev/null 2>&1; then
   . "$HOME/.local/share/../bin/env"
   eval "$(uv generate-shell-completion zsh)"
@@ -80,3 +72,11 @@ fi
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+
+# pnpm
+export PNPM_HOME='/home/heber/.local/share/pnpm'
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
