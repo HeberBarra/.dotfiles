@@ -6,6 +6,8 @@
   email = heberferreirabarra@gmail.com
 [commit]
   gpgsign = true
+[tag]
+  gpgsign = true
 [pull]
   rebase = true
 [core]
@@ -30,5 +32,10 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
+[merge]
+  conflictStyle = zdiff3
 [push]
   autoSetupRemote = true
+[rerere]
+  enabled = true
+
