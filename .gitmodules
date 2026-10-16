@@ -14,7 +14,7 @@
 	path = config/zsh/plugins/zsh-you-should-use
 	url = https://github.com/MichaelAquilina/zsh-you-should-use.git
 [submodule "config/kitty/themes/catppuccin"]
-	path = config/kitty/themes/catppuccin
+	path = kitty/.config/kitty/themes/catppuccin
 	url = https://github.com/catppuccin/kitty.git
 [submodule "config/zsh/plugins/zsh-vi-mode"]
 	path = config/zsh/plugins/zsh-vi-mode
