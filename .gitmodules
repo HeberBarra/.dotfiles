@@ -1,30 +1,30 @@
 [submodule "bat/.config/bat/themes/catppuccin"]
 	path = bat/.config/bat/themes/catppuccin
 	url = https://github.com/catppuccin/bat.git
-[submodule "config/zsh/plugins/fzf-tab"]
-	path = config/zsh/plugins/fzf-tab
-	url = https://github.com/Aloxaf/fzf-tab.git
-[submodule "config/zsh/plugins/zsh-autosuggestions"]
-	path = config/zsh/plugins/zsh-autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions.git
-[submodule "config/zsh/plugins/zsh-syntax-highlighting"]
-	path = config/zsh/plugins/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule "config/zsh/plugins/zsh-you-should-use"]
-	path = config/zsh/plugins/zsh-you-should-use
-	url = https://github.com/MichaelAquilina/zsh-you-should-use.git
-[submodule "config/kitty/themes/catppuccin"]
-	path = kitty/.config/kitty/themes/catppuccin
-	url = https://github.com/catppuccin/kitty.git
-[submodule "config/zsh/plugins/zsh-vi-mode"]
-	path = config/zsh/plugins/zsh-vi-mode
-  url = https://github.com/jeffreytse/zsh-vi-mode.git
 [submodule "fuzzel/.config/fuzzel/themes/catppuccin"]
 	path = fuzzel/.config/fuzzel/themes/catppuccin
 	url = https://github.com/catppuccin/fuzzel
 [submodule "git/catppuccin-delta"]
 	path = git/catppuccin-delta
 	url = https://github.com/catppuccin/delta.git
+[submodule "kitty/.config/kitty/themes/catppuccin"]
+	path = kitty/.config/kitty/themes/catppuccin
+	url = https://github.com/catppuccin/kitty.git
 [submodule "yazi/.config/yazi/themes/catppuccin"]
 	path = yazi/.config/yazi/themes/catppuccin
 	url = https://github.com/catppuccin/yazi.git
+[submodule "zsh/.config/zsh/plugins/zsh-autosuggestions"]
+	path = zsh/.config/zsh/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "zsh/.config/zsh/plugins/fzf-tab"]
+	path = zsh/.config/zsh/plugins/fzf-tab
+	url = https://github.com/Aloxaf/fzf-tab.git
+[submodule "zsh/.config/zsh/plugins/zsh-syntax-highlighting"]
+	path = zsh/.config/zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "zsh/.config/zsh/plugins/zsh-vi-mode"]
+	path = zsh/.config/zsh/plugins/zsh-vi-mode
+	url = https://github.com/jeffreytse/zsh-vi-mode.git
+[submodule "zsh/.config/zsh/plugins/zsh-you-should-use"]
+	path = zsh/.config/zsh/plugins/zsh-you-should-use
+	url = https://github.com/MichaelAquilina/zsh-you-should-use.git
