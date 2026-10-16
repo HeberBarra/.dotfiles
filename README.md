@@ -1,5 +1,6 @@
 # Included Programs
 
+- bat
 - fastfetch
 - fuzzel
 - git
@@ -10,6 +11,7 @@
 - powershell
 - rmpc
 - systemd
+- yazi
 - zshell
 
 Feel free to use and modify any file included in here.
