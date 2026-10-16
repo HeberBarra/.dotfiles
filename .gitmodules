@@ -10,15 +10,15 @@
 [submodule "config/zsh/plugins/zsh-you-should-use"]
 	path = config/zsh/plugins/zsh-you-should-use
 	url = https://github.com/MichaelAquilina/zsh-you-should-use.git
-[submodule "git-config/catppuccin-delta"]
-	path = git-config/catppuccin-delta
-	url = https://github.com/catppuccin/delta.git
 [submodule "config/kitty/themes/catppuccin"]
 	path = config/kitty/themes/catppuccin
 	url = https://github.com/catppuccin/kitty.git
 [submodule "config/zsh/plugins/zsh-vi-mode"]
 	path = config/zsh/plugins/zsh-vi-mode
-	url = https://github.com/jeffreytse/zsh-vi-mode.git
+  url = https://github.com/jeffreytse/zsh-vi-mode.git
 [submodule "fuzzel/.config/fuzzel/themes/catppuccin"]
 	path = fuzzel/.config/fuzzel/themes/catppuccin
 	url = https://github.com/catppuccin/fuzzel
+[submodule "git/catppuccin-delta"]
+	path = git/catppuccin-delta
+	url = https://github.com/catppuccin/delta.git
