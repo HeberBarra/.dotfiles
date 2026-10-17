@@ -50,6 +50,7 @@ eval "$(zoxide init --cmd cd zsh)"
 eval "$(oh-my-posh init zsh --config $XDG_CONFIG_HOME/ohmyposh/config.toml)"
 
 
+# nvm
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -63,15 +64,31 @@ if command -v nvm >/dev/null 2>&1; then
   }
 
 fi
+# nvm end
 
+# yazi
+if command -v yazi >/dev/null 2>&1; then
+  function y() {
+	  local tmp cwd; tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	  command yazi "$@" --cwd-file="$tmp"
+	  IFS= read -r -d '' cwd < "$tmp"
+	  [ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd" || builtin true
+	  command rm -f -- "$tmp"
+  }
+fi
+# yazi end
+
+# uv
 if command -v uv >/dev/null 2>&1; then
   . "$HOME/.local/share/../bin/env"
   eval "$(uv generate-shell-completion zsh)"
 fi
+# uv end
 
+# sdkman
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
+# sdkman end
 
 # pnpm
 export PNPM_HOME='/home/heber/.local/share/pnpm'
