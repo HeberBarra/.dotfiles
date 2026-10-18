@@ -1,1 +1,2 @@
-/home/heber/.dotfiles/yazi/.config/yazi/themes/catppuccin/themes/macchiato/catppuccin-macchiato-sapphire.toml
+[flavor]
+dark="catppuccin-macchiato"
