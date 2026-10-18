@@ -9,12 +9,16 @@ if command -v bat >/dev/null 2>&1; then
   alias cat=" bat"
 fi
 
+if command -v fastfetch >/dev/null 2>&1; then
+  alias fastfetch=" fastfetch"
+fi
+
 if command -v lsd >/dev/null 2>&1; then
   alias ls=" lsd -A --color=always --group-dirs=first"
   alias tree=" lsd --tree --group-dirs=first"
 fi
 
-if command -v fastfetch >/dev/null 2>&1; then
-  alias fastfetch=" fastfetch"
+if command -v yazi >/dev/null 2>&1; then
+  alias yz="y"
 fi
 
